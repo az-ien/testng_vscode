@@ -15,7 +15,7 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-         int a = 2;
+         int a = 6;
         int b = 3;
         int result = a + b;
 
