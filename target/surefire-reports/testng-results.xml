@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-21T18:49:19 PKT" name="Surefire suite" finished-at="2025-11-21T18:49:19 PKT" duration-ms="50">
+  <suite started-at="2025-12-12T17:54:19 PKT" name="Surefire suite" finished-at="2025-12-12T17:55:19 PKT" duration-ms="60773">
     <groups>
     </groups>
-    <test started-at="2025-11-21T18:49:19 PKT" name="Surefire test" finished-at="2025-11-21T18:49:19 PKT" duration-ms="50">
-      <class name="com.example.AppTest">
-        <test-method signature="shouldAnswerWithTrue()[pri:0, instance:com.example.AppTest@5e4c8041]" started-at="2025-11-21T18:49:19 PKT" name="shouldAnswerWithTrue" finished-at="2025-11-21T18:49:19 PKT" duration-ms="5" status="PASS">
+    <test started-at="2025-12-12T17:54:19 PKT" name="Surefire test" finished-at="2025-12-12T17:55:19 PKT" duration-ms="60773">
+      <class name="com.example.BrokenLinks">
+        <test-method signature="BrokenLinks()[pri:0, instance:com.example.BrokenLinks@60611244]" started-at="2025-12-12T17:54:19 PKT" name="BrokenLinks" finished-at="2025-12-12T17:55:19 PKT" duration-ms="60685" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- shouldAnswerWithTrue -->
-      </class> <!-- com.example.AppTest -->
+        </test-method> <!-- BrokenLinks -->
+      </class> <!-- com.example.BrokenLinks -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
