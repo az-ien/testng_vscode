@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-12T17:54:19 PKT" name="Surefire suite" finished-at="2025-12-12T17:55:19 PKT" duration-ms="60773">
+  <suite started-at="2025-12-15T11:48:22 PKT" name="Surefire suite" finished-at="2025-12-15T11:48:22 PKT" duration-ms="56">
     <groups>
     </groups>
-    <test started-at="2025-12-12T17:54:19 PKT" name="Surefire test" finished-at="2025-12-12T17:55:19 PKT" duration-ms="60773">
-      <class name="com.example.BrokenLinks">
-        <test-method signature="BrokenLinks()[pri:0, instance:com.example.BrokenLinks@60611244]" started-at="2025-12-12T17:54:19 PKT" name="BrokenLinks" finished-at="2025-12-12T17:55:19 PKT" duration-ms="60685" status="PASS">
+    <test started-at="2025-12-15T11:48:22 PKT" name="Surefire test" finished-at="2025-12-15T11:48:22 PKT" duration-ms="56">
+      <class name="com.example.DependencyMethods">
+        <test-method signature="openapp()[pri:1, instance:com.example.DependencyMethods@5db45159]" started-at="2025-12-15T11:48:22 PKT" name="openapp" finished-at="2025-12-15T11:48:22 PKT" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BrokenLinks -->
-      </class> <!-- com.example.BrokenLinks -->
+        </test-method> <!-- openapp -->
+        <test-method signature="login()[pri:2, instance:com.example.DependencyMethods@5db45159]" started-at="2025-12-15T11:48:22 PKT" name="login" finished-at="2025-12-15T11:48:22 PKT" depends-on-methods="com.example.DependencyMethods.openapp" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="search()[pri:3, instance:com.example.DependencyMethods@5db45159]" started-at="2025-12-15T11:48:22 PKT" name="search" finished-at="2025-12-15T11:48:22 PKT" depends-on-methods="com.example.DependencyMethods.login" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method signature="advsearch()[pri:4, instance:com.example.DependencyMethods@5db45159]" started-at="2025-12-15T11:48:22 PKT" name="advsearch" finished-at="2025-12-15T11:48:22 PKT" depends-on-methods="com.example.DependencyMethods.search, com.example.DependencyMethods.login" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- advsearch -->
+        <test-method signature="logut()[pri:5, instance:com.example.DependencyMethods@5db45159]" started-at="2025-12-15T11:48:22 PKT" name="logut" finished-at="2025-12-15T11:48:22 PKT" depends-on-methods="com.example.DependencyMethods.advsearch" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logut -->
+      </class> <!-- com.example.DependencyMethods -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
