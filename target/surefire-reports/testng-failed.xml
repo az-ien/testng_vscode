@@ -3,15 +3,13 @@
 <suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="1" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.example.DependencyMethods">
+      <class name="com.example.day45.dataproviderdemo">
         <methods>
-          <include name="openapp"/>
-          <include name="search"/>
-          <include name="advsearch"/>
-          <include name="logut"/>
-          <include name="login"/>
+          <include name="testLogin" invocation-numbers="4"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.example.DependencyMethods -->
+      </class> <!-- com.example.day45.dataproviderdemo -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
