@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-15T19:46:12 PKT" name="day45" finished-at="2025-12-15T19:46:16 PKT" duration-ms="3442">
+  <suite started-at="2025-12-15T19:51:55 PKT" name="day45" finished-at="2025-12-15T19:51:59 PKT" duration-ms="3923">
     <groups>
     </groups>
-    <test started-at="2025-12-15T19:46:12 PKT" name="edgetests" finished-at="2025-12-15T19:46:15 PKT" duration-ms="3425">
+    <test started-at="2025-12-15T19:51:55 PKT" name="edgetests" finished-at="2025-12-15T19:51:59 PKT" duration-ms="3923">
       <class name="com.example.day45.paralleltests">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.example.day45.paralleltests@f5ac9e4]" started-at="2025-12-15T19:46:12 PKT" name="setup" finished-at="2025-12-15T19:46:15 PKT" duration-ms="3020" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.example.day45.paralleltests@795cd85e]" started-at="2025-12-15T19:51:55 PKT" name="setup" finished-at="2025-12-15T19:51:58 PKT" duration-ms="3302" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,19 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testParallel()[pri:0, instance:com.example.day45.paralleltests@f5ac9e4]" started-at="2025-12-15T19:46:15 PKT" name="testParallel" finished-at="2025-12-15T19:46:15 PKT" duration-ms="0" status="PASS">
+        <test-method signature="testParallel()[pri:0, instance:com.example.day45.paralleltests@795cd85e]" started-at="2025-12-15T19:51:58 PKT" name="testParallel" finished-at="2025-12-15T19:51:58 PKT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testParallel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.day45.paralleltests@f5ac9e4]" started-at="2025-12-15T19:46:15 PKT" name="tearDown" finished-at="2025-12-15T19:46:15 PKT" duration-ms="346" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.day45.paralleltests@795cd85e]" started-at="2025-12-15T19:51:58 PKT" name="tearDown" finished-at="2025-12-15T19:51:59 PKT" duration-ms="539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.example.day45.paralleltests -->
     </test> <!-- edgetests -->
-    <test started-at="2025-12-15T19:46:12 PKT" name="chrometests" finished-at="2025-12-15T19:46:16 PKT" duration-ms="3442">
+    <test started-at="2025-12-15T19:51:55 PKT" name="chrometests" finished-at="2025-12-15T19:51:59 PKT" duration-ms="3923">
       <class name="com.example.day45.paralleltests">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.example.day45.paralleltests@41e36e46]" started-at="2025-12-15T19:46:12 PKT" name="setup" finished-at="2025-12-15T19:46:15 PKT" duration-ms="3172" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.example.day45.paralleltests@4facf68f]" started-at="2025-12-15T19:51:55 PKT" name="setup" finished-at="2025-12-15T19:51:59 PKT" duration-ms="3459" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,11 +41,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testParallel()[pri:0, instance:com.example.day45.paralleltests@41e36e46]" started-at="2025-12-15T19:46:15 PKT" name="testParallel" finished-at="2025-12-15T19:46:15 PKT" duration-ms="1" status="PASS">
+        <test-method signature="testParallel()[pri:0, instance:com.example.day45.paralleltests@4facf68f]" started-at="2025-12-15T19:51:59 PKT" name="testParallel" finished-at="2025-12-15T19:51:59 PKT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testParallel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.day45.paralleltests@41e36e46]" started-at="2025-12-15T19:46:15 PKT" name="tearDown" finished-at="2025-12-15T19:46:16 PKT" duration-ms="236" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.day45.paralleltests@4facf68f]" started-at="2025-12-15T19:51:59 PKT" name="tearDown" finished-at="2025-12-15T19:51:59 PKT" duration-ms="401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
