@@ -1,33 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="3" total="7" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-15T11:48:22 PKT" name="Surefire suite" finished-at="2025-12-15T11:48:22 PKT" duration-ms="56">
+  <suite started-at="2025-12-15T15:04:21 PKT" name="groupingsuite" finished-at="2025-12-15T15:04:21 PKT" duration-ms="63">
     <groups>
+      <group name="functional">
+        <method signature="paymenttests.paymentinruppees()[pri:1, instance:com.example.testgrouping.paymenttests@3c130745]" name="paymentinruppees" class="com.example.testgrouping.paymenttests"/>
+      </group> <!-- functional -->
+      <group name="regression">
+        <method signature="paymenttests.paymentinruppees()[pri:1, instance:com.example.testgrouping.paymenttests@3c130745]" name="paymentinruppees" class="com.example.testgrouping.paymenttests"/>
+        <method signature="paymenttests.paymentindollars()[pri:2, instance:com.example.testgrouping.paymenttests@3c130745]" name="paymentindollars" class="com.example.testgrouping.paymenttests"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="loginTests.loginByEmail()[pri:1, instance:com.example.testgrouping.loginTests@49d904ec]" name="loginByEmail" class="com.example.testgrouping.loginTests"/>
+        <method signature="paymenttests.paymentinruppees()[pri:1, instance:com.example.testgrouping.paymenttests@3c130745]" name="paymentinruppees" class="com.example.testgrouping.paymenttests"/>
+        <method signature="loginTests.loginByFacebook()[pri:2, instance:com.example.testgrouping.loginTests@49d904ec]" name="loginByFacebook" class="com.example.testgrouping.loginTests"/>
+        <method signature="paymenttests.paymentindollars()[pri:2, instance:com.example.testgrouping.paymenttests@3c130745]" name="paymentindollars" class="com.example.testgrouping.paymenttests"/>
+      </group> <!-- sanity -->
     </groups>
-    <test started-at="2025-12-15T11:48:22 PKT" name="Surefire test" finished-at="2025-12-15T11:48:22 PKT" duration-ms="56">
-      <class name="com.example.DependencyMethods">
-        <test-method signature="openapp()[pri:1, instance:com.example.DependencyMethods@5db45159]" started-at="2025-12-15T11:48:22 PKT" name="openapp" finished-at="2025-12-15T11:48:22 PKT" duration-ms="5" status="PASS">
+    <test started-at="2025-12-15T15:04:21 PKT" name="groupingtests" finished-at="2025-12-15T15:04:21 PKT" duration-ms="63">
+      <class name="com.example.testgrouping.paymenttests">
+        <test-method signature="paymentinruppees()[pri:1, instance:com.example.testgrouping.paymenttests@3c130745]" started-at="2025-12-15T15:04:21 PKT" name="paymentinruppees" finished-at="2025-12-15T15:04:21 PKT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openapp -->
-        <test-method signature="login()[pri:2, instance:com.example.DependencyMethods@5db45159]" started-at="2025-12-15T11:48:22 PKT" name="login" finished-at="2025-12-15T11:48:22 PKT" depends-on-methods="com.example.DependencyMethods.openapp" duration-ms="1" status="PASS">
+        </test-method> <!-- paymentinruppees -->
+        <test-method signature="paymentindollars()[pri:2, instance:com.example.testgrouping.paymenttests@3c130745]" started-at="2025-12-15T15:04:21 PKT" name="paymentindollars" finished-at="2025-12-15T15:04:21 PKT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="search()[pri:3, instance:com.example.DependencyMethods@5db45159]" started-at="2025-12-15T11:48:22 PKT" name="search" finished-at="2025-12-15T11:48:22 PKT" depends-on-methods="com.example.DependencyMethods.login" duration-ms="0" status="PASS">
+        </test-method> <!-- paymentindollars -->
+      </class> <!-- com.example.testgrouping.paymenttests -->
+      <class name="com.example.testgrouping.loginTests">
+        <test-method signature="loginByEmail()[pri:1, instance:com.example.testgrouping.loginTests@49d904ec]" started-at="2025-12-15T15:04:21 PKT" name="loginByEmail" finished-at="2025-12-15T15:04:21 PKT" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- search -->
-        <test-method signature="advsearch()[pri:4, instance:com.example.DependencyMethods@5db45159]" started-at="2025-12-15T11:48:22 PKT" name="advsearch" finished-at="2025-12-15T11:48:22 PKT" depends-on-methods="com.example.DependencyMethods.search, com.example.DependencyMethods.login" duration-ms="0" status="PASS">
+        </test-method> <!-- loginByEmail -->
+        <test-method signature="loginByFacebook()[pri:2, instance:com.example.testgrouping.loginTests@49d904ec]" started-at="2025-12-15T15:04:21 PKT" name="loginByFacebook" finished-at="2025-12-15T15:04:21 PKT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- advsearch -->
-        <test-method signature="logut()[pri:5, instance:com.example.DependencyMethods@5db45159]" started-at="2025-12-15T11:48:22 PKT" name="logut" finished-at="2025-12-15T11:48:22 PKT" depends-on-methods="com.example.DependencyMethods.advsearch" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logut -->
-      </class> <!-- com.example.DependencyMethods -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+        </test-method> <!-- loginByFacebook -->
+      </class> <!-- com.example.testgrouping.loginTests -->
+    </test> <!-- groupingtests -->
+  </suite> <!-- groupingsuite -->
 </testng-results>
