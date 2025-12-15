@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.example.DependencyMethods
--------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 0.64 s <<< FAILURE! - in com.example.DependencyMethods
-search(com.example.DependencyMethods)  Time elapsed: 0.013 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at com.example.DependencyMethods.search(DependencyMethods.java:29)
-
