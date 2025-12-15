@@ -3,7 +3,7 @@
 
 
 
-<suite name ="groupingsuite" parallel ="tests"> // parallel key word will run the three browser tests in parallel at the same time 
+<suite name ="day45" parallel ="tests"> // parallel key word will run the three browser tests in parallel at the same time 
 //this parallel can be kept in tests but then the syntax will be parallel ="classes", if parallel is kept in parent then the syntax has to have child
 //thread-count =5 , this is optional but it creates 5 threads/processes if it is not added then only one thread/process is created, maximum 2-5 otherwise system might hang due to memory allocation
 //multiple parameters can be passed like URL and then the test method will receive another parameter 
@@ -23,13 +23,6 @@
 </classes>
 </test>
 
-
-<test name ="firefoxtests">
-<parameter name ="browser" value ="firefox"/>
-<classes>
-<class name="com.example.day45.paralleltests"/>
-</classes>
-</test>
 
 
 </suite>
