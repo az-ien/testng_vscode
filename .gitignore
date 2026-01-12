@@ -1,0 +1,8 @@
+/target/
+
+## Logs
+*.log
+logs/
+*.log.*
+
+.github/

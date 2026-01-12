@@ -1,9 +1,9 @@
+com\example\testgrouping\paymenttests.class
+com\example\DependencyMethods.class
 com\example\day45\paralleltests.class
 com\example\testgrouping\signupTests.class
 com\example\testgrouping\loginTests.class
-com\example\testgrouping\paymenttests.class
 com\example\SampleTest.class
 com\example\dataproviderdemo.class
 com\example\BrokenLinks.class
 com\example\AppTest.class
-com\example\DependencyMethods.class
