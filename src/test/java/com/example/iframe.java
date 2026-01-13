@@ -5,6 +5,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -25,15 +26,15 @@ WebDriverWait mywait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 
 //Approach 1
-// WebElement frameElemnet = driver.findElement(By.xpath("//iframe[@id='singleframe']"));
-// driver.switchTo().frame(frameElemnet);
-// driver.findElement(By.xpath("//input[type='text']")).sendKeys("testing");
+WebElement frameElemnet = driver.findElement(By.xpath("//iframe[@id='iframe-1']"));
+driver.switchTo().frame(frameElemnet);
+driver.findElement(By.xpath("//a[@class='getStarted_Sjon']")).click();
 
 
 //Approach2
-WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("//iframe[@id='iframe-1']"));
-driver.findElement(By.xpath("//a[@class='getStarted_Sjon']")).click();
+// WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+// wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("//iframe[@id='iframe-1']"));
+// driver.findElement(By.xpath("//a[@class='getStarted_Sjon']")).click();
 
 }    
 }
