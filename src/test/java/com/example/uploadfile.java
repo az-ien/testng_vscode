@@ -44,9 +44,8 @@ assert successMessage.isDisplayed();
 // //Apporach 2: using robot class to handle file upload dialog
 // //This works only when a real OS file chooser opens and you have a desktop environment. If you were running in headless mode or a remote environment without a display, this approach won’t work — in those cases, using sendKeys()
 // WebElement element = driver.findElement(By.id("singleFileInput"));
-// JavascriptExecutor js = (JavascriptExecutor) driver;
-// js.executeScript("arguments[0].scrollIntoView(true);", element);
-// js.executeScript("arguments[0].click();", element);
+// Actions actions = new Actions(driver);
+// actions.moveToElement(element).click().perform();
 
 
 // // Use Robot class to handle the OS file dialog
