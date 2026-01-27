@@ -35,8 +35,7 @@ while (true) {
 
     // Wait to ensure page content is loaded
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    List<WebElement> productsBefore = driver.findElements(
-        By.xpath("//a[@class='pc-custom-link jfy-item hp-mod-card-hover']"));
+    List<WebElement> productsBefore = driver.findElements(By.xpath("//a[@class='pc-custom-link jfy-item hp-mod-card-hover']"));
 
     currentCount = productsBefore.size();
 
@@ -50,8 +49,7 @@ while (true) {
 
     previousCount = currentCount;
 
-    List<WebElement> loadMoreButton = driver.findElements(
-        By.xpath("//div[contains(text(), 'Load More')]"));
+    List<WebElement> loadMoreButton = driver.findElements(By.xpath("//div[contains(text(), 'Load More')]"));
 
     if (loadMoreButton.size() > 0) {
 
@@ -61,8 +59,7 @@ while (true) {
         wait.until(ExpectedConditions.elementToBeClickable(loadMore)).click();
 
         // Wait for more products to load (count > previous)
-        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(
-            By.xpath("//a[@class='pc-custom-link jfy-item hp-mod-card-hover']"),
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//a[@class='pc-custom-link jfy-item hp-mod-card-hover']"),
             previousCount
         ));
 
