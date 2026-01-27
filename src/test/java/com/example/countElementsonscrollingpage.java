@@ -1,14 +1,14 @@
 package com.example;
 
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class countElementsonscrollingpage {
@@ -28,37 +28,52 @@ driver.manage().window().maximize();
 // the elements after the while loop were added to the list and finally the size of the list was printed
 
 
-
-driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-List<WebElement> productsBefore = driver.findElements(By.xpath("//a[@class='pc-custom-link jfy-item hp-mod-card-hover']")); 
-System.out.println("list of products on the page: " + productsBefore.size());
-driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-List<WebElement> allProducts = new ArrayList<>(productsBefore);
+int previousCount=0;
+int currentCount=0;
 
 while (true) {
-List <WebElement> loadMoreButton = driver.findElements(By.xpath("//div[contains(text(), 'Load More')]"));
 
-if (loadMoreButton.size() > 0) {
+    // Wait to ensure page content is loaded
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    List<WebElement> productsBefore = driver.findElements(
+        By.xpath("//a[@class='pc-custom-link jfy-item hp-mod-card-hover']"));
 
-WebElement loadMoreButtons = loadMoreButton.get(0);
-Actions actions = new Actions(driver);
-actions.moveToElement(loadMoreButtons).click().perform();
-driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    currentCount = productsBefore.size();
 
-List<WebElement> productsAfter = driver.findElements(By.xpath("//a[@class='pc-custom-link jfy-item hp-mod-card-hover']")); 
-//System.out.println("list of products on the page: " + productsAfter.size());
-allProducts.addAll(productsAfter);
-} 
-    
-else 
-{
-break;
+    System.out.println("Current count: " + currentCount + " Previous count: " + previousCount);
+
+    // If no more new products loaded => exit loop
+    if (currentCount == previousCount) {
+        System.out.println("No more products to load!");
+        break;
+    }
+
+    previousCount = currentCount;
+
+    List<WebElement> loadMoreButton = driver.findElements(
+        By.xpath("//div[contains(text(), 'Load More')]"));
+
+    if (loadMoreButton.size() > 0) {
+
+        WebElement loadMore = loadMoreButton.get(0);
+
+        // Wait until clickable and click
+        wait.until(ExpectedConditions.elementToBeClickable(loadMore)).click();
+
+        // Wait for more products to load (count > previous)
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(
+            By.xpath("//a[@class='pc-custom-link jfy-item hp-mod-card-hover']"),
+            previousCount
+        ));
+
+    } else {
+        System.out.println("Load More button not found!");
+        break;
+    }
 }
 
-}
-
-System.out.println("Total combined products: " + allProducts.size());
-
+System.out.println("Total combined products: " + previousCount);
 driver.quit();
-}
-}
+
+} 
+} 
