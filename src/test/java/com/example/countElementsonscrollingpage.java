@@ -27,6 +27,16 @@ driver.manage().window().maximize();
 // then a while loop was used to pick more products until the load more button is not visible anymore
 // the elements after the while loop were added to the list and finally the size of the list was printed
 
+// Always use findElements() when the element may or may not be present. Then check:
+
+// if (list.size() > 0) {
+//     // Element exists; check if displayed and clickable
+// } else {
+//     // Element absent → exit loop
+// }
+
+
+
 
 int previousCount=0;
 int currentCount=0;
