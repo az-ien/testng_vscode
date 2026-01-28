@@ -1,0 +1,44 @@
+name: Run Selenium Tests
+
+# Trigger the workflow on push to main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        java-version: [17]     # set the Java version you’re using
+
+    steps:
+      # Checkout the repository
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      # Set up JDK
+      - name: Set up JDK ${{ matrix.java-version }}
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java-version }}
+
+      # Cache Maven dependencies (optional but speeds up builds)
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-m2-
+
+      # Install dependencies & compile
+      - name: Build with Maven
+        run: mvn clean compile --batch-mode
+
+      # Run tests
+      - name: Run Selenium tests
+        run: mvn test --batch-mode
