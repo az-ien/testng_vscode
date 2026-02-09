@@ -30,7 +30,7 @@ driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 @Test
 void testParallel()
 {
-	System.out.println("Test running on " + Thread.currentThread().getId());
+	System.out.println("Test running on " + Thread.currentThread().getName());
 }
 
 @AfterClass
