@@ -46,7 +46,7 @@ jobs:
       # surefire reports are added in the artifacts
       - name: Upload test reports
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: TestNG Reports
           path: target/surefire-reports/
