@@ -42,3 +42,11 @@ jobs:
       # Run tests
       - name: Run Selenium tests
         run: mvn test --batch-mode
+        
+      # surefire reports are added in the artifacts
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: TestNG Reports
+          path: target/surefire-reports/
