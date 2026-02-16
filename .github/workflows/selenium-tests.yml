@@ -39,6 +39,13 @@ jobs:
       - name: Build with Maven
         run: mvn clean compile --batch-mode
 
+
+      # Install Chrome browser
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v2
+        with:
+          install-chromedriver: true
+
       # Run tests
       - name: Run Selenium tests
         run: mvn test --batch-mode
