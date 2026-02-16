@@ -59,9 +59,9 @@ public void test2()
     driver =new ChromeDriver();
     //--------------------------------------------------------------------
     setDriver(driver);
-    getdriver().get("https://stackoverflow.com/");
+    getdriver().get("https://www.bing.com/");
    //--------------------------------------------------------------------
-   //driver.get("https://stackoverflow.com/");
+   //driver.get("https://www.bing.com/");
     System.out.println("Title of the page is "+driver.getTitle());
     //driver.quit();
     getdriver().quit();
