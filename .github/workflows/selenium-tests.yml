@@ -39,24 +39,6 @@ jobs:
       - name: Build with Maven
         run: mvn clean compile --batch-mode
 
-
-      # Install Chrome browser
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v2
-        with:
-          install-chromedriver: true
-
-       # Install and start Xvfb for headless display
-      - name: Install Xvfb
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y xvfb
-
-      - name: Start Xvfb
-        run: |
-          Xvfb :99 -screen 0 1920x1080x24 &
-          echo "DISPLAY=:99" >> $GITHUB_ENV
-
       # Run tests
       - name: Run Selenium tests
         run: mvn test --batch-mode

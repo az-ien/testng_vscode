@@ -2,6 +2,7 @@ package com.example.Threadsafteryconcept;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
@@ -37,10 +38,17 @@ public class threadsafetydrivertest {
 // so that each thread can access its own copy of the driver without any interference from other threads, 
 // and this will allow us to run the tests in parallel without any interference from each other,
 
+
+
 @Test
 public void test1()
 {
-    driver =new ChromeDriver();
+ChromeOptions options = new ChromeOptions();
+options.addArguments("--headless=new");
+options.addArguments("--no-sandbox");
+options.addArguments("--disable-dev-shm-usage");
+
+    driver =new ChromeDriver(options);
    //--------------------------------------------------------------------
     setDriver(driver);
     getdriver().get("https://www.google.com/");
@@ -56,7 +64,12 @@ public void test1()
 @Test
 public void test2()
 {
-    driver =new ChromeDriver();
+ChromeOptions options = new ChromeOptions();
+options.addArguments("--headless=new");
+options.addArguments("--no-sandbox");
+options.addArguments("--disable-dev-shm-usage");
+
+    driver =new ChromeDriver(options);
     //--------------------------------------------------------------------
     setDriver(driver);
     getdriver().get("https://www.bing.com/");
