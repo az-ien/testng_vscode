@@ -83,7 +83,7 @@
          <!-- <suiteXmlFile>src/test/java/com/example/day45/testng.xml</suiteXmlFile> -->
           <!-- <suiteXmlFile>src/test/java/com/example/DataProvider/dataprov.xml</suiteXmlFile> -->
           <!-- <suiteXmlFile>src/test/java/com/example/Threadsafteryconcept/threadsafety.xml</suiteXmlFile> -->
-          <suiteXmlFile>src/test/java/com/example/GenericTestRunnerXML/GenericTestRunnerXML.xml</suiteXmlFile>
+          <suiteXmlFile>src/test/java/com/example/GenericTestRunnerXML/GenericTestRunner.xml</suiteXmlFile>
         </suiteXmlFiles>
       </configuration>
         </plugin>
